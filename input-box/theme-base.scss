@@ -1,0 +1,25 @@
+// 主题：边框、颜色、背景；修改边距也可以
+.input-box{
+  border: 1px solid black;
+  box-sizing: border-box;
+  header{
+    flex: 0 0 auto;
+    display: flex;
+    .title,.button-group,.preset{
+    }
+    .preset{
+    }
+  }
+  main{
+  }
+  textarea{
+    &:focus{
+      outline: none;
+    }
+  }
+}
+
+
+
+
+

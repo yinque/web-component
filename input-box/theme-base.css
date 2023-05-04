@@ -1,0 +1,13 @@
+.input-box {
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+.input-box header {
+  flex: 0 0 auto;
+  display: flex;
+}
+.input-box textarea:focus {
+  outline: none;
+}
+
+/*# sourceMappingURL=theme-base.css.map */

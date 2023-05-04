@@ -1,0 +1,33 @@
+.wrapper {
+  width: 600px;
+  height: 600px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.input-box header {
+  flex: 0 0 auto;
+  display: flex;
+}
+.input-box header .title, .input-box header .button-group, .input-box header .preset {
+  flex: 1 1 auto;
+}
+.input-box header .preset {
+  text-align: center;
+}
+.input-box main {
+  flex: 1 1 auto;
+  padding: 2px;
+}
+.input-box textarea {
+  resize: none;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/*# sourceMappingURL=layout.css.map */
