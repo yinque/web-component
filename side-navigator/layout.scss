@@ -1,0 +1,19 @@
+//布局：包含大小、位置
+.wrapper{
+  width: 300px;
+  height: 600px;
+  padding: 20px;
+  border: 1px dashed black;
+}
+
+details>*:not(summary) {
+  margin-left: 1em;
+}
+
+summary::marker{
+}
+
+
+
+
+

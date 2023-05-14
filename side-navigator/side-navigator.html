@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>侧边栏导航</title>
+    <link rel="stylesheet" href="layout.css">
+</head>
+<body>
+<div class="wrapper">
+</div>
+
+</body>
+<script>
+const json_text = `{
+\t"name": "John Doe",
+\t"age": 30,
+\t"email": "john.doe@example.com",
+\t"address": {
+\t\t"street": "123 Main St",
+\t\t"city": "Anytown",
+\t\t"state": "CA",
+\t\t"zip": "12345"
+\t},
+\t"phoneNumbers": [
+\t\t{
+\t\t\t"type": "home",
+\t\t\t"number": "555-555-1234"
+\t\t},
+\t\t{
+\t\t\t"type": "work",
+\t\t\t"number": "555-555-5678"
+\t\t}
+\t]
+}`
+
+// object to navigator dom
+function objToDom(obj,key=null) {
+    let child_html = '';
+    for (const key in obj) {
+        if (obj.hasOwnProperty(key)) {
+            const value = obj[key];
+            let html_item = '';
+            if(typeof value === 'object'){
+                html_item = objToDom(value,key);
+            }else if(typeof value === 'string'){
+                html_item = `<div>${key}: ${value}</div>`
+            }
+            child_html += html_item;
+        }
+    }
+    // object parser
+    const size = Object.keys(obj).length;
+    const type = Array.isArray(obj)?"array":"object";
+    const sufix = Array.isArray(obj)?`[${size}]`:`{${size}}`;
+
+    return `
+    <details>
+        <summary>${key||type} ${sufix}</summary>
+        ${child_html}
+    </details>
+    `;
+}
+
+document.querySelector('div.wrapper').innerHTML = objToDom(JSON.parse(json_text));
+</script>
+</html>

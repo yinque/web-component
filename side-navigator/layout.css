@@ -1,0 +1,12 @@
+.wrapper {
+  width: 300px;
+  height: 600px;
+  padding: 20px;
+  border: 1px dashed black;
+}
+
+details > *:not(summary) {
+  margin-left: 1em;
+}
+
+/*# sourceMappingURL=layout.css.map */
