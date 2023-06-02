@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UI模仿</title>
+</head>
+<body>
+<h2>可爱头像框</h2>
+<div>
+    <img src="thor_thumb.png" class="avatar" alt="maid">
+</div>
+<span>zzz</span>
+</body>
+<style>
+body{
+    background-color: #EEE;
+    text-align: center;
+}
+.avatar{
+    width: 100px;
+    background-color: #fe4f4a;;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+.avatar{
+    transition: 0.1s linear;
+}
+.avatar:hover {
+    /*transform: scale(1.1) rotate(12deg);*/
+    animation: hover-animation 0.5s forwards;
+
+}
+@keyframes hover-animation {
+    0% {
+    }
+    50% {
+        transform: scale(1.1) rotate(15deg);
+    }
+    100% {
+        transform: scale(1.1) rotate(13deg);
+    }
+}
+
+
+</style>
+</html>
